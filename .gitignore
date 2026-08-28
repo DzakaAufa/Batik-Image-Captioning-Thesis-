@@ -1,0 +1,49 @@
+# ==========================================
+# 1. Virtual Environments & Local Runtimes
+# ==========================================
+capenv/
+dzakaenv/
+dzakanenv/
+evalenv/
+java_libs/
+env/
+venv/
+.venv/
+
+# ==========================================
+# 2. Python & Jupyter Cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# ==========================================
+# 3. Model Weights & Large Binaries (Global)
+#    (Menjaga file deploy, script, & config tetap amaan)
+# ==========================================
+models/
+skripsi/models/
+experiment/models/
+*.safetensors
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.h5
+
+# ==========================================
+# 4. Large Raw Dataset Images
+# ==========================================
+dataset/
+foto/
+*.zip
+*.tar.gz
+
+# ==========================================
+# 5. Local Training Logs
+# ==========================================
+logs/
+*.log
+
+upload_model.py

@@ -1,0 +1,32 @@
+nohup: ignoring input
+Some weights of Dinov2ForImageClassification were not initialized from the model checkpoint at facebook/dinov2-large and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+-> DINOv2 Classifier berhasil dimuat!
+-> Memuat Processor Qwen2.5-VL...
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+-> Memuat Base Model: Qwen/Qwen2.5-VL-7B-Instruct (4-bit)
+Traceback (most recent call last):
+  File "/mnt/extended-home/dzakaaufa/src/qwen/batch_inference.py", line 318, in <module>
+    pipeline = BatikMultimodalPipeline(CLASSIFIER_PATH, VLM_ADAPTER_PATH)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extended-home/dzakaaufa/src/qwen/batch_inference.py", line 190, in __init__
+    self.vlm_processor, self.vlm_model = load_vlm_model(vlm_adapter_path)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extended-home/dzakaaufa/src/qwen/batch_inference.py", line 164, in load_vlm_model
+    base_model = AutoModelForVision2Seq.from_pretrained(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extended-home/dzakaaufa/capenv/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extended-home/dzakaaufa/capenv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 308, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extended-home/dzakaaufa/capenv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 4594, in from_pretrained
+    device_map = _get_device_map(model, device_map, max_memory, hf_quantizer, torch_dtype, keep_in_fp32_regex)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/extended-home/dzakaaufa/capenv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 1342, in _get_device_map
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "/mnt/extended-home/dzakaaufa/capenv/lib/python3.11/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 104, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. 

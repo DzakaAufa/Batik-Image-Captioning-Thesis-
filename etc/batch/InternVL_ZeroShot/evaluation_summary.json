@@ -1,0 +1,14 @@
+{
+    "BLEU-1": 0,
+    "BLEU-2": 0,
+    "BLEU-3": 0,
+    "BLEU-4": 0,
+    "ROUGE-1": 0.0,
+    "ROUGE-2": 0.0,
+    "ROUGE-L": 0.0,
+    "METEOR": 0.0,
+    "CIDEr": 0.0,
+    "num_samples": 50,
+    "model_name": "InternVL_ZeroShot",
+    "model_type": "internvl"
+}

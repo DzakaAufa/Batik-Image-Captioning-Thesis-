@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoRA Batik Captioner</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap');
+
+        :root {
+            --batik-indigo: #2D2060;
+            --batik-gold: #C8932A;
+            --batik-gold-light: #F0C96E;
+            --batik-cream: #FBF6ED;
+            --batik-rust: #8B3A1A;
+            --batik-teal: #1A5C58;
+            --batik-blush: #E8D5C0;
+            --accent: #C8932A;
+            --text-primary: #1A1230;
+            --text-secondary: #5A4E6B;
+            --border: rgba(200,147,42,0.25);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--batik-cream);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        /* Batik SVG pattern background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='3' fill='none' stroke='%23C8932A' stroke-width='0.5' opacity='0.18'/%3E%3Ccircle cx='40' cy='40' r='12' fill='none' stroke='%23C8932A' stroke-width='0.4' opacity='0.1'/%3E%3Ccircle cx='40' cy='40' r='22' fill='none' stroke='%23C8932A' stroke-width='0.3' opacity='0.07'/%3E%3Cline x1='0' y1='40' x2='80' y2='40' stroke='%23C8932A' stroke-width='0.3' opacity='0.08'/%3E%3Cline x1='40' y1='0' x2='40' y2='80' stroke='%23C8932A' stroke-width='0.3' opacity='0.08'/%3E%3Ccircle cx='0' cy='0' r='5' fill='none' stroke='%23C8932A' stroke-width='0.4' opacity='0.1'/%3E%3Ccircle cx='80' cy='0' r='5' fill='none' stroke='%23C8932A' stroke-width='0.4' opacity='0.1'/%3E%3Ccircle cx='0' cy='80' r='5' fill='none' stroke='%23C8932A' stroke-width='0.4' opacity='0.1'/%3E%3Ccircle cx='80' cy='80' r='5' fill='none' stroke='%23C8932A' stroke-width='0.4' opacity='0.1'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 560px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(45,32,96,0.12), 0 2px 8px rgba(45,32,96,0.06);
+        }
+
+        /* Decorative top band */
+        .card-header {
+            background: var(--batik-indigo);
+            padding: 2rem 2rem 1.6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--batik-rust), var(--batik-gold), var(--batik-teal), var(--batik-gold), var(--batik-rust));
+        }
+        /* Decorative circles in header */
+        .card-header::before {
+            content: '';
+            position: absolute;
+            right: -30px; top: -30px;
+            width: 130px; height: 130px;
+            border-radius: 50%;
+            border: 20px solid rgba(200,147,42,0.15);
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(200,147,42,0.18);
+            border: 1px solid rgba(200,147,42,0.35);
+            color: var(--batik-gold-light);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-bottom: 10px;
+        }
+        .badge-dot {
+            width: 6px; height: 6px;
+            background: var(--batik-gold-light);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.75); }
+        }
+
+        .card-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+        .card-header p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.5;
+        }
+
+        .card-body { padding: 1.75rem 2rem 2rem; }
+
+        /* Upload zone */
+        .upload-zone {
+            border: 2px dashed var(--border);
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: var(--batik-cream);
+            position: relative;
+        }
+        .upload-zone:hover, .upload-zone.drag-over {
+            border-color: var(--batik-gold);
+            background: #FFF8EE;
+        }
+        .upload-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .upload-icon {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            background: rgba(200,147,42,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+        }
+        .upload-icon svg { width: 26px; height: 26px; stroke: var(--batik-gold); }
+
+        .upload-zone .upload-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        .upload-zone .upload-sub {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Preview */
+        .preview-wrap {
+            display: none;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1.5px solid var(--border);
+            position: relative;
+        }
+        .preview-wrap img {
+            width: 100%;
+            max-height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+        .preview-change {
+            position: absolute;
+            bottom: 8px; right: 8px;
+            background: rgba(30,20,50,0.75);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 100px;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            backdrop-filter: blur(4px);
+        }
+        .preview-change:hover { background: rgba(30,20,50,0.9); }
+        .preview-change svg { width: 13px; height: 13px; stroke: #fff; }
+
+        /* Submit button */
+        .btn-analyze {
+            width: 100%;
+            margin-top: 1.25rem;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            background: var(--batik-indigo);
+            color: #fff;
+            letter-spacing: 0.01em;
+        }
+        .btn-analyze:disabled {
+            background: #C8C2D8;
+            cursor: not-allowed;
+            color: #8a839a;
+        }
+        .btn-analyze:not(:disabled):hover {
+            background: #3D2E82;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(45,32,96,0.3);
+        }
+        .btn-analyze:not(:disabled):active { transform: translateY(0); }
+
+        .btn-analyze svg { width: 18px; height: 18px; stroke: currentColor; flex-shrink: 0; }
+
+        /* Loader */
+        .loader-wrap {
+            display: none;
+            padding: 2rem 0 0.5rem;
+            text-align: center;
+        }
+        .loader-bar {
+            height: 3px;
+            background: rgba(200,147,42,0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .loader-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--batik-rust), var(--batik-gold), var(--batik-teal));
+            border-radius: 10px;
+            animation: loading 2.2s ease-in-out infinite;
+        }
+        @keyframes loading {
+            0% { width: 0%; margin-left: 0; }
+            50% { width: 70%; margin-left: 15%; }
+            100% { width: 5%; margin-left: 95%; }
+        }
+        .loader-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Result */
+        .result-wrap { display: none; margin-top: 1.25rem; }
+
+        .result-motif {
+            background: var(--batik-indigo);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 12px;
+        }
+        .motif-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 4px;
+        }
+        .motif-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: #fff;
+            line-height: 1.25;
+        }
+        .confidence-pill {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+        .confidence-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.5);
+        }
+        .confidence-value {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--batik-gold-light);
+        }
+
+        .result-desc {
+            background: var(--batik-cream);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+        }
+        .desc-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .desc-label::before {
+            content: '';
+            width: 10px; height: 2px;
+            background: var(--batik-gold);
+            border-radius: 2px;
+        }
+        .desc-text {
+            font-size: 14px;
+            color: var(--text-primary);
+            line-height: 1.65;
+        }
+
+        /* Error */
+        .error-box {
+            background: #FFF1F0;
+            border: 1.5px solid #FFB8B5;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-top: 1.25rem;
+            display: none;
+        }
+        .error-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #A32D2D;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .error-msg { font-size: 13px; color: #5A0000; }
+
+        /* Copy btn */
+        .copy-btn {
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: none;
+            border: 1.5px solid var(--border);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 5px 12px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .copy-btn:hover { border-color: var(--batik-gold); color: var(--batik-gold); }
+        .copy-btn svg { width: 13px; height: 13px; stroke: currentColor; }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: rgba(200,147,42,0.15);
+            margin: 1.25rem 0;
+        }
+
+        /* Footer hint */
+        .footer-hint {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .card-body { padding: 1.25rem; }
+            .card-header { padding: 1.5rem 1.25rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="header-badge">
+                <span class="badge-dot"></span>
+                Model Activated
+            </div>
+            <h1>Batik Motif AI</h1>
+            <p>Upload batik fabric's picture to detect motif &amp; automated visual description</p>
+        </div>
+
+        <div class="card-body">
+
+            <!-- Upload zone (default) -->
+            <div class="upload-zone" id="uploadZone">
+                <input type="file" id="imageInput" accept="image/*">
+                <div class="upload-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+                        <polyline points="7 9 12 4 17 9"/>
+                        <line x1="12" y1="4" x2="12" y2="16"/>
+                    </svg>
+                </div>
+                <div class="upload-title">Choose or Drag Picture</div>
+                <div class="upload-sub">JPG, PNG, WEBP — maks. 10 MB</div>
+            </div>
+
+            <!-- Preview (shown after image selected) -->
+            <div class="preview-wrap" id="previewWrap">
+                <img id="preview" alt="Pratinjau gambar batik">
+                <button class="preview-change" id="changeBtn" title="Ganti gambar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                    </svg>
+                    Change
+                </button>
+            </div>
+
+            <!-- CTA Button -->
+            <button class="btn-analyze" id="submitBtn" onclick="getCaption()" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                Analyse Motif
+            </button>
+
+            <!-- Loading bar -->
+            <div class="loader-wrap" id="loaderWrap">
+                <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+                <div class="loader-text" id="loaderText">Detect batik motif…</div>
+            </div>
+
+            <!-- Error box -->
+            <div class="error-box" id="errorBox">
+                <div class="error-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                    Error occure
+                </div>
+                <div class="error-msg" id="errorMsg"></div>
+            </div>
+
+            <!-- Result -->
+            <div class="result-wrap" id="resultWrap">
+                <div class="result-motif">
+                    <div>
+                        <div class="motif-label">Motif Detected</div>
+                        <div class="motif-name" id="resMotif">—</div>
+                    </div>
+                    <div class="confidence-pill">
+                        <div class="confidence-label">Confidence</div>
+                        <div class="confidence-value" id="resConf">—</div>
+                    </div>
+                </div>
+                <div class="result-desc">
+                    <div class="desc-label">Visual Description</div>
+                    <div class="desc-text" id="resDesc">—</div>
+                    <button class="copy-btn" id="copyBtn" onclick="copyResult()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Copy description
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-hint">Supported by LoRA Model · Specialized for Nusantara Batik</div>
+        </div>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const preview = document.getElementById('preview');
+        const previewWrap = document.getElementById('previewWrap');
+        const uploadZone = document.getElementById('uploadZone');
+        const submitBtn = document.getElementById('submitBtn');
+        const loaderWrap = document.getElementById('loaderWrap');
+        const loaderText = document.getElementById('loaderText');
+        const resultWrap = document.getElementById('resultWrap');
+        const errorBox = document.getElementById('errorBox');
+        const changeBtn = document.getElementById('changeBtn');
+
+        const loadingMessages = [
+            'Mendeteksi motif batik…',
+            'Menganalisis pola dan warna…',
+            'Membaca struktur ragam hias…',
+            'Menyusun deskripsi visual…',
+        ];
+        let loadingInterval;
+
+        imageInput.addEventListener('change', handleFile);
+
+        changeBtn.addEventListener('click', () => {
+            imageInput.value = '';
+            previewWrap.style.display = 'none';
+            uploadZone.style.display = 'block';
+            submitBtn.disabled = true;
+            resultWrap.style.display = 'none';
+            errorBox.style.display = 'none';
+        });
+
+        // Drag & drop
+        uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+        uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+        uploadZone.addEventListener('drop', e => {
+            e.preventDefault();
+            uploadZone.classList.remove('drag-over');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                setFile(file);
+            }
+        });
+
+        function handleFile(e) {
+            const file = e.target.files[0];
+            if (file) setFile(file);
+        }
+
+        function setFile(file) {
+            preview.src = URL.createObjectURL(file);
+            previewWrap.style.display = 'block';
+            uploadZone.style.display = 'none';
+            submitBtn.disabled = false;
+            resultWrap.style.display = 'none';
+            errorBox.style.display = 'none';
+        }
+
+        function startLoadingCycle() {
+            let i = 0;
+            loaderText.textContent = loadingMessages[0];
+            loadingInterval = setInterval(() => {
+                i = (i + 1) % loadingMessages.length;
+                loaderText.style.opacity = 0;
+                setTimeout(() => {
+                    loaderText.textContent = loadingMessages[i];
+                    loaderText.style.opacity = 1;
+                }, 200);
+            }, 1800);
+        }
+
+        function stopLoadingCycle() {
+            clearInterval(loadingInterval);
+        }
+
+        async function getCaption() {
+            const file = imageInput.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            submitBtn.disabled = true;
+            loaderWrap.style.display = 'block';
+            resultWrap.style.display = 'none';
+            errorBox.style.display = 'none';
+            startLoadingCycle();
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                stopLoadingCycle();
+                loaderWrap.style.display = 'none';
+
+                if (data.status === 'error') {
+                    errorBox.style.display = 'block';
+                    document.getElementById('errorMsg').textContent = data.message;
+                } else {
+                    document.getElementById('resMotif').textContent = data.data.analysis.motif_detected;
+                    document.getElementById('resConf').textContent = data.data.analysis.confidence_score;
+                    document.getElementById('resDesc').textContent = data.data.visual_description;
+                    resultWrap.style.display = 'block';
+                    resultWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            } catch (err) {
+                stopLoadingCycle();
+                loaderWrap.style.display = 'none';
+                errorBox.style.display = 'block';
+                document.getElementById('errorMsg').textContent = 'Tidak dapat terhubung ke server. Pastikan server API sedang berjalan.';
+                console.error(err);
+            } finally {
+                submitBtn.disabled = false;
+            }
+        }
+
+        function copyResult() {
+            const text = document.getElementById('resDesc').textContent;
+            const btn = document.getElementById('copyBtn');
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg> Tersalin!`;
+                setTimeout(() => {
+                    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Salin deskripsi`;
+                }, 1800);
+            });
+        }
+    </script>
+</body>
+</html>

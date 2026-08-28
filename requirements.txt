@@ -1,0 +1,100 @@
+# # General Libraries
+# pandas==2.2.2
+# numpy==1.26.4
+# tqdm
+# requests==2.31.0
+# opencv-python==4.9.0.80
+# matplotlib==3.8.2
+# seaborn==0.13.2
+# wordcloud
+# ipywidgets
+# nltk==3.8.1
+
+# # HuggingFace Core 
+# transformers==4.40.2
+# tokenizers==0.19.1
+# accelerate==0.31.0
+# datasets==2.18.0
+# evaluate==0.4.1
+# safetensors==0.4.2
+# huggingface-hub==0.26.2
+# pillow==10.2.0
+
+# # BLIP-2 Training Addons
+# bitsandbytes==0.42.0
+# peft>=0.10.0
+
+# # PyTorch
+# torch==2.1.2
+# torchvision==0.16.2
+
+# # Deployment
+# streamlit==1.32.0
+
+
+# ===============================
+# Core Deep Learning
+# ===============================
+torch==2.1.2
+torchvision==0.16.2
+torchaudio==2.1.2
+# ↑ proven stable with BLIP-2, avoids torch 2.4+ regressions
+
+
+# ===============================
+# Hugging Face Ecosystem (CRITICAL)
+# ===============================
+transformers==4.36.0
+huggingface-hub==0.36.0
+accelerate==0.25.0
+safetensors==0.4.2
+tokenizers==0.15.0
+
+# NOTES:
+# - transformers 4.36.x = widely used before BLIP-2 loader regressions
+# - safetensors <0.5 avoids enum/config parsing errors
+# - huggingface-hub 0.36 works with transformers 4.36
+
+
+# ===============================
+# BLIP-2 / OPT Requirements
+# ===============================
+sentencepiece==0.1.99
+protobuf==3.20.3
+# protobuf pinned: newer versions break some OPT-based configs
+
+
+# ===============================
+# Parameter Efficient Fine-Tuning (Optional but common)
+# ===============================
+peft==0.7.1
+bitsandbytes==0.41.1
+# NOTE:
+# - peft 0.7.x is safest for BLIP-2 + LoRA
+# - bitsandbytes >=0.49 causes CUDA + torch incompatibility in many cases
+
+
+# ===============================
+# Vision & Image I/O
+# ===============================
+Pillow==10.2.0
+opencv-python==4.9.0.80
+
+
+# ===============================
+# Data & Utilities
+# ===============================
+numpy==1.26.4
+pandas==2.2.2
+tqdm==4.66.1
+pyyaml==6.0.3
+requests==2.28.1
+
+
+# ===============================
+# Evaluation (if using caption metrics)
+# ===============================
+pycocotools==2.0.10
+pycocoevalcap==1.2
+rouge_score==0.1.2
+evaluate==0.4.1

@@ -1,0 +1,64 @@
+nohup: ignoring input
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781568642.690892 2201451 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+ Membaca data hasil prediksi: /mnt/extended-home/dzakaaufa/evaluation_results/experiment_1a_zero_inject.csv
+
+[Mulai] Menghitung Metrik Evaluasi...
+--------------------------------------------------
+ -> [1/8] Menghitung BLEU Score (NLTK)...
+ -> [2/8] Menghitung ROUGE-L Score...
+ -> [3/8] Menghitung METEOR Score...
+[nltk_data] Downloading package wordnet to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+ -> [4/8] Menghitung SPICE Score...
+Parsing reference captions
+Parsing test captions
+Initiating Stanford parsing pipeline
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator tokenize
+[main] INFO edu.stanford.nlp.pipeline.TokenizerAnnotator - TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ssplit
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator parse
+[main] INFO edu.stanford.nlp.parser.common.ParserGrammar - Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... 
+done [0.4 sec].
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator lemma
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ner
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1.4 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [0.5 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [0.5 sec].
+Threads( StanfordCoreNLP ) [20.767 seconds]
+SPICE evaluation took: 30.77 s
+ -> [5/8] Menghitung BERTScore...
+ -> [6/8] Menghitung CLIPScore...
+CLIP:   0%|          | 0/150 [00:00<?, ?it/s]CLIP:   1%|          | 1/150 [00:03<09:41,  3.90s/it]CLIP:   1%|▏         | 2/150 [00:04<05:07,  2.08s/it]CLIP:   2%|▏         | 3/150 [00:05<03:33,  1.45s/it]CLIP:   3%|▎         | 4/150 [00:06<02:45,  1.13s/it]CLIP:   3%|▎         | 5/150 [00:06<02:25,  1.00s/it]CLIP:   4%|▍         | 6/150 [00:07<02:05,  1.15it/s]CLIP:   5%|▍         | 7/150 [00:07<01:41,  1.41it/s]CLIP:   5%|▌         | 8/150 [00:08<01:32,  1.54it/s]CLIP:   6%|▌         | 9/150 [00:08<01:23,  1.69it/s]CLIP:   7%|▋         | 10/150 [00:09<01:20,  1.73it/s]CLIP:   7%|▋         | 11/150 [00:09<01:16,  1.82it/s]CLIP:   8%|▊         | 12/150 [00:10<01:16,  1.79it/s]CLIP:   9%|▊         | 13/150 [00:11<01:39,  1.38it/s]CLIP:   9%|▉         | 14/150 [00:12<01:40,  1.35it/s]CLIP:  10%|█         | 15/150 [00:13<01:42,  1.31it/s]CLIP:  11%|█         | 16/150 [00:14<01:50,  1.21it/s]CLIP:  11%|█▏        | 17/150 [00:14<01:45,  1.25it/s]CLIP:  12%|█▏        | 18/150 [00:15<01:54,  1.15it/s]CLIP:  13%|█▎        | 19/150 [00:16<01:49,  1.20it/s]CLIP:  13%|█▎        | 20/150 [00:17<01:34,  1.37it/s]CLIP:  14%|█▍        | 21/150 [00:17<01:25,  1.52it/s]CLIP:  15%|█▍        | 22/150 [00:18<01:25,  1.50it/s]CLIP:  15%|█▌        | 23/150 [00:18<01:21,  1.56it/s]CLIP:  16%|█▌        | 24/150 [00:19<01:27,  1.44it/s]CLIP:  17%|█▋        | 25/150 [00:20<01:29,  1.39it/s]CLIP:  17%|█▋        | 26/150 [00:21<01:26,  1.43it/s]CLIP:  18%|█▊        | 27/150 [00:21<01:17,  1.59it/s]CLIP:  19%|█▊        | 28/150 [00:22<01:13,  1.65it/s]CLIP:  19%|█▉        | 29/150 [00:22<01:15,  1.60it/s]CLIP:  20%|██        | 30/150 [00:23<01:17,  1.54it/s]CLIP:  21%|██        | 31/150 [00:24<01:21,  1.46it/s]CLIP:  21%|██▏       | 32/150 [00:25<01:30,  1.30it/s]CLIP:  22%|██▏       | 33/150 [00:25<01:30,  1.30it/s]CLIP:  23%|██▎       | 34/150 [00:26<01:18,  1.48it/s]CLIP:  23%|██▎       | 35/150 [00:27<01:13,  1.56it/s]CLIP:  24%|██▍       | 36/150 [00:27<01:13,  1.54it/s]CLIP:  25%|██▍       | 37/150 [00:28<01:20,  1.41it/s]CLIP:  25%|██▌       | 38/150 [00:29<01:18,  1.42it/s]CLIP:  26%|██▌       | 39/150 [00:29<01:18,  1.41it/s]CLIP:  27%|██▋       | 40/150 [00:30<01:25,  1.29it/s]CLIP:  27%|██▋       | 41/150 [00:31<01:26,  1.26it/s]CLIP:  28%|██▊       | 42/150 [00:32<01:13,  1.48it/s]CLIP:  29%|██▊       | 43/150 [00:32<01:12,  1.48it/s]CLIP:  29%|██▉       | 44/150 [00:33<01:11,  1.48it/s]CLIP:  30%|███       | 45/150 [00:33<01:01,  1.70it/s]CLIP:  31%|███       | 46/150 [00:34<01:02,  1.67it/s]CLIP:  31%|███▏      | 47/150 [00:35<01:02,  1.64it/s]CLIP:  32%|███▏      | 48/150 [00:35<00:58,  1.76it/s]CLIP:  33%|███▎      | 49/150 [00:36<00:57,  1.76it/s]CLIP:  33%|███▎      | 50/150 [00:36<00:54,  1.84it/s]CLIP:  34%|███▍      | 51/150 [00:37<01:03,  1.56it/s]CLIP:  35%|███▍      | 52/150 [00:38<01:07,  1.45it/s]CLIP:  35%|███▌      | 53/150 [00:39<01:12,  1.33it/s]CLIP:  36%|███▌      | 54/150 [00:39<01:01,  1.55it/s]CLIP:  37%|███▋      | 55/150 [00:40<00:55,  1.72it/s]CLIP:  37%|███▋      | 56/150 [00:40<01:01,  1.53it/s]CLIP:  38%|███▊      | 57/150 [00:41<01:13,  1.26it/s]CLIP:  39%|███▊      | 58/150 [00:42<01:15,  1.21it/s]CLIP:  39%|███▉      | 59/150 [00:43<01:11,  1.27it/s]CLIP:  40%|████      | 60/150 [00:44<01:08,  1.31it/s]CLIP:  41%|████      | 61/150 [00:45<01:11,  1.24it/s]CLIP:  41%|████▏     | 62/150 [00:45<01:10,  1.25it/s]CLIP:  42%|████▏     | 63/150 [00:46<01:11,  1.22it/s]CLIP:  43%|████▎     | 64/150 [00:47<01:02,  1.37it/s]CLIP:  43%|████▎     | 65/150 [00:47<00:55,  1.53it/s]CLIP:  44%|████▍     | 66/150 [00:48<00:52,  1.59it/s]CLIP:  45%|████▍     | 67/150 [00:49<00:52,  1.58it/s]CLIP:  45%|████▌     | 68/150 [00:49<00:54,  1.51it/s]CLIP:  46%|████▌     | 69/150 [00:50<00:54,  1.49it/s]CLIP:  47%|████▋     | 70/150 [00:51<00:55,  1.45it/s]CLIP:  47%|████▋     | 71/150 [00:51<00:57,  1.38it/s]CLIP:  48%|████▊     | 72/150 [00:52<00:56,  1.37it/s]CLIP:  49%|████▊     | 73/150 [00:53<00:49,  1.55it/s]CLIP:  49%|████▉     | 74/150 [00:53<00:48,  1.56it/s]CLIP:  50%|█████     | 75/150 [00:54<00:44,  1.69it/s]CLIP:  51%|█████     | 76/150 [00:54<00:39,  1.87it/s]CLIP:  51%|█████▏    | 77/150 [00:55<00:37,  1.96it/s]CLIP:  52%|█████▏    | 78/150 [00:55<00:34,  2.06it/s]CLIP:  53%|█████▎    | 79/150 [00:56<00:33,  2.12it/s]CLIP:  53%|█████▎    | 80/150 [00:56<00:31,  2.20it/s]CLIP:  54%|█████▍    | 81/150 [00:56<00:31,  2.20it/s]CLIP:  55%|█████▍    | 82/150 [00:57<00:30,  2.22it/s]CLIP:  55%|█████▌    | 83/150 [00:57<00:31,  2.11it/s]CLIP:  56%|█████▌    | 84/150 [00:58<00:30,  2.15it/s]CLIP:  57%|█████▋    | 85/150 [00:58<00:31,  2.05it/s]CLIP:  57%|█████▋    | 86/150 [00:59<00:32,  1.95it/s]CLIP:  58%|█████▊    | 87/150 [00:59<00:30,  2.04it/s]CLIP:  59%|█████▊    | 88/150 [01:00<00:31,  1.96it/s]CLIP:  59%|█████▉    | 89/150 [01:00<00:31,  1.96it/s]CLIP:  60%|██████    | 90/150 [01:01<00:32,  1.87it/s]CLIP:  61%|██████    | 91/150 [01:02<00:32,  1.84it/s]CLIP:  61%|██████▏   | 92/150 [01:02<00:34,  1.68it/s]CLIP:  62%|██████▏   | 93/150 [01:03<00:35,  1.63it/s]CLIP:  63%|██████▎   | 94/150 [01:04<00:41,  1.36it/s]CLIP:  63%|██████▎   | 95/150 [01:04<00:36,  1.53it/s]CLIP:  64%|██████▍   | 96/150 [01:05<00:32,  1.65it/s]CLIP:  65%|██████▍   | 97/150 [01:05<00:31,  1.67it/s]CLIP:  65%|██████▌   | 98/150 [01:06<00:30,  1.68it/s]CLIP:  66%|██████▌   | 99/150 [01:06<00:27,  1.88it/s]CLIP:  67%|██████▋   | 100/150 [01:07<00:24,  2.02it/s]CLIP:  67%|██████▋   | 101/150 [01:08<00:26,  1.85it/s]CLIP:  68%|██████▊   | 102/150 [01:08<00:25,  1.86it/s]CLIP:  69%|██████▊   | 103/150 [01:09<00:24,  1.88it/s]CLIP:  69%|██████▉   | 104/150 [01:09<00:21,  2.13it/s]CLIP:  70%|███████   | 105/150 [01:09<00:21,  2.05it/s]CLIP:  71%|███████   | 106/150 [01:10<00:22,  1.96it/s]CLIP:  71%|███████▏  | 107/150 [01:11<00:22,  1.89it/s]CLIP:  72%|███████▏  | 108/150 [01:11<00:23,  1.82it/s]CLIP:  73%|███████▎  | 109/150 [01:12<00:23,  1.72it/s]CLIP:  73%|███████▎  | 110/150 [01:13<00:25,  1.56it/s]CLIP:  74%|███████▍  | 111/150 [01:13<00:25,  1.53it/s]CLIP:  75%|███████▍  | 112/150 [01:14<00:26,  1.45it/s]CLIP:  75%|███████▌  | 113/150 [01:15<00:24,  1.52it/s]CLIP:  76%|███████▌  | 114/150 [01:15<00:23,  1.51it/s]CLIP:  77%|███████▋  | 115/150 [01:16<00:21,  1.63it/s]CLIP:  77%|███████▋  | 116/150 [01:16<00:21,  1.59it/s]CLIP:  78%|███████▊  | 117/150 [01:17<00:21,  1.52it/s]CLIP:  79%|███████▊  | 118/150 [01:18<00:22,  1.45it/s]CLIP:  79%|███████▉  | 119/150 [01:19<00:20,  1.50it/s]CLIP:  80%|████████  | 120/150 [01:19<00:19,  1.57it/s]CLIP:  81%|████████  | 121/150 [01:20<00:19,  1.51it/s]CLIP:  81%|████████▏ | 122/150 [01:20<00:16,  1.65it/s]CLIP:  82%|████████▏ | 123/150 [01:21<00:15,  1.75it/s]CLIP:  83%|████████▎ | 124/150 [01:21<00:14,  1.77it/s]CLIP:  83%|████████▎ | 125/150 [01:22<00:15,  1.64it/s]CLIP:  84%|████████▍ | 126/150 [01:22<00:12,  1.87it/s]CLIP:  85%|████████▍ | 127/150 [01:23<00:12,  1.90it/s]CLIP:  85%|████████▌ | 128/150 [01:23<00:11,  1.90it/s]CLIP:  86%|████████▌ | 129/150 [01:24<00:13,  1.61it/s]CLIP:  87%|████████▋ | 130/150 [01:25<00:11,  1.73it/s]CLIP:  87%|████████▋ | 131/150 [01:25<00:10,  1.82it/s]CLIP:  88%|████████▊ | 132/150 [01:26<00:09,  1.93it/s]CLIP:  89%|████████▊ | 133/150 [01:26<00:08,  1.91it/s]CLIP:  89%|████████▉ | 134/150 [01:27<00:08,  1.82it/s]CLIP:  90%|█████████ | 135/150 [01:28<00:08,  1.74it/s]CLIP:  91%|█████████ | 136/150 [01:28<00:07,  1.79it/s]CLIP:  91%|█████████▏| 137/150 [01:29<00:07,  1.68it/s]CLIP:  92%|█████████▏| 138/150 [01:29<00:07,  1.59it/s]CLIP:  93%|█████████▎| 139/150 [01:30<00:07,  1.53it/s]CLIP:  93%|█████████▎| 140/150 [01:31<00:06,  1.48it/s]CLIP:  94%|█████████▍| 141/150 [01:31<00:05,  1.55it/s]CLIP:  95%|█████████▍| 142/150 [01:32<00:05,  1.57it/s]CLIP:  95%|█████████▌| 143/150 [01:33<00:04,  1.68it/s]CLIP:  96%|█████████▌| 144/150 [01:33<00:03,  1.71it/s]CLIP:  97%|█████████▋| 145/150 [01:34<00:02,  1.68it/s]CLIP:  97%|█████████▋| 146/150 [01:34<00:02,  1.65it/s]CLIP:  98%|█████████▊| 147/150 [01:35<00:01,  1.51it/s]CLIP:  99%|█████████▊| 148/150 [01:36<00:01,  1.48it/s]CLIP:  99%|█████████▉| 149/150 [01:36<00:00,  1.56it/s]CLIP: 100%|██████████| 150/150 [01:37<00:00,  1.57it/s]CLIP: 100%|██████████| 150/150 [01:37<00:00,  1.54it/s]
+ -> [7/8] Menghitung Classification Accuracy...
+ -> [8/8] Menghitung Motif Mention Rate...
+
+=======================================================
+ HASIL EVALUASI CAPTIONING BATIK
+=======================================================
+Jumlah Sampel Diuji          : 150
+-------------------------------------------------------
+BLEU-1 (Precision)           : 0.4438
+BLEU-4 (Grammar)             : 0.2639
+ROUGE-L (Recall)             : 0.4674
+METEOR (Synonyms)            : 0.5502
+SPICE (Graph/Sem)            : 0.3701
+BERTScore (Semantic)         : 0.9147
+CLIPScore (Visual)           : 0.3375
+-------------------------------------------------------
+VLM Classification Acc       : 0.9067
+Motif Mention Rate           : 0.9067
+-------------------------------------------------------
+Lexical Relevance Avg        : 0.4313
+Overall Quality Avg          : 0.4782
+=======================================================
+Ringkasan sukses disimpan ke → /mnt/extended-home/dzakaaufa/evaluation_results/metrics_summary.json
+

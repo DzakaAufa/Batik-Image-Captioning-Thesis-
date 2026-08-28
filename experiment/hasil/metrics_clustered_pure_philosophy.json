@@ -1,0 +1,14 @@
+{
+    "Classification_Accuracy": 0.948948948948949,
+    "Motif_Mention_Rate": 0.6786786786786787,
+    "Philosophy_BERTScore": 0.8894345613571258,
+    "Philosophy_Semantic_Similarity": 0.6340487789105367,
+    "Philosophy_Keyword_Coverage": 0.14666666666666667,
+    "Philosophy_Consistency": 0.9981981981981981,
+    "Visual_BERTScore": 0.0,
+    "METEOR": 0.0,
+    "SPICE": 0.0,
+    "CLIPScore": 0.0,
+    "Philosophy_Quality_Avg": 0.5567166689781098,
+    "Visual_Quality_Avg": 0.0
+}

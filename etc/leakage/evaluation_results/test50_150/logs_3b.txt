@@ -1,0 +1,172 @@
+nohup: ignoring input
+=== INFERENSI: Mode=hard | Adapter=/mnt/extended-home/dzakaaufa/leakage/models50_150/qwen ===
+Some weights of Dinov2ForImageClassification were not initialized from the model checkpoint at facebook/dinov2-large and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+-> Memuat Processor: Qwen/Qwen2.5-VL-7B-Instruct
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+-> Memuat Base Model (4-bit)...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:03<00:14,  3.54s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:05<00:08,  2.88s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:08<00:05,  2.71s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:10<00:02,  2.58s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:11<00:00,  1.72s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:11<00:00,  2.21s/it]
+-> Memasang LoRA Adapter dari:
+   /mnt/extended-home/dzakaaufa/leakage/models50_150/qwen
+-> Memuat ground truth master dari /mnt/extended-home/dzakaaufa/leakage/models50_150/data_final_ready1.csv...
+-> Berhasil menyaring data. Ditemukan 150 baris split 'test'.
+[INFO] Total 150 gambar siap diinferensi.
+Evaluasi Test Set:   0%|          | 0/150 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   1%|          | 1/150 [00:18<44:57, 18.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   1%|▏         | 2/150 [00:35<43:43, 17.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   2%|▏         | 3/150 [00:52<42:33, 17.37s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   3%|▎         | 4/150 [01:04<36:51, 15.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   3%|▎         | 5/150 [01:22<39:05, 16.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   4%|▍         | 6/150 [01:36<36:51, 15.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   5%|▍         | 7/150 [01:50<36:17, 15.23s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   5%|▌         | 8/150 [02:06<36:15, 15.32s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   6%|▌         | 9/150 [02:21<35:43, 15.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   7%|▋         | 10/150 [02:37<35:46, 15.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   7%|▋         | 11/150 [02:53<36:09, 15.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   8%|▊         | 12/150 [03:14<39:31, 17.18s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   9%|▊         | 13/150 [03:29<38:17, 16.77s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:   9%|▉         | 14/150 [03:49<39:50, 17.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  10%|█         | 15/150 [04:04<38:11, 16.98s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  11%|█         | 16/150 [04:19<36:02, 16.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  11%|█▏        | 17/150 [04:37<37:24, 16.88s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  12%|█▏        | 18/150 [04:56<38:19, 17.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  13%|█▎        | 19/150 [05:10<35:57, 16.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  13%|█▎        | 20/150 [05:31<38:35, 17.81s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  14%|█▍        | 21/150 [05:53<40:40, 18.92s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  15%|█▍        | 22/150 [06:13<41:03, 19.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  15%|█▌        | 23/150 [06:31<40:30, 19.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  16%|█▌        | 24/150 [06:52<41:01, 19.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  17%|█▋        | 25/150 [07:13<41:54, 20.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  17%|█▋        | 26/150 [07:34<42:08, 20.39s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  18%|█▊        | 27/150 [07:52<40:05, 19.55s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  19%|█▊        | 28/150 [08:16<42:17, 20.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  19%|█▉        | 29/150 [08:38<42:30, 21.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  20%|██        | 30/150 [08:58<41:46, 20.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  21%|██        | 31/150 [09:18<40:43, 20.53s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  21%|██▏       | 32/150 [09:39<40:53, 20.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  22%|██▏       | 33/150 [10:02<41:50, 21.46s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  23%|██▎       | 34/150 [10:18<38:03, 19.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  23%|██▎       | 35/150 [10:36<36:59, 19.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  24%|██▍       | 36/150 [10:58<38:15, 20.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  25%|██▍       | 37/150 [11:18<38:02, 20.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  25%|██▌       | 38/150 [11:37<36:38, 19.63s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  26%|██▌       | 39/150 [11:53<34:17, 18.54s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  27%|██▋       | 40/150 [12:15<36:04, 19.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  27%|██▋       | 41/150 [12:39<38:03, 20.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  28%|██▊       | 42/150 [12:57<36:15, 20.14s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  29%|██▊       | 43/150 [13:17<35:28, 19.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  29%|██▉       | 44/150 [13:35<34:17, 19.41s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  30%|███       | 45/150 [13:53<33:20, 19.05s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  31%|███       | 46/150 [14:15<34:33, 19.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  31%|███▏      | 47/150 [14:35<34:09, 19.90s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  32%|███▏      | 48/150 [14:56<34:30, 20.29s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  33%|███▎      | 49/150 [15:13<32:41, 19.42s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  33%|███▎      | 50/150 [15:27<29:34, 17.75s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  34%|███▍      | 51/150 [15:49<31:25, 19.04s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  35%|███▍      | 52/150 [16:13<33:35, 20.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  35%|███▌      | 53/150 [16:34<33:26, 20.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  36%|███▌      | 54/150 [16:48<29:41, 18.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  37%|███▋      | 55/150 [17:09<30:26, 19.22s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  37%|███▋      | 56/150 [17:24<28:21, 18.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  38%|███▊      | 57/150 [17:43<28:16, 18.24s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  39%|███▊      | 58/150 [17:58<26:18, 17.16s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  39%|███▉      | 59/150 [18:12<24:56, 16.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  40%|████      | 60/150 [18:33<26:22, 17.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  41%|████      | 61/150 [18:54<27:54, 18.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  41%|████▏     | 62/150 [19:14<28:00, 19.10s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  42%|████▏     | 63/150 [19:34<27:53, 19.23s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  43%|████▎     | 64/150 [19:47<24:56, 17.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  43%|████▎     | 65/150 [20:07<25:51, 18.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  44%|████▍     | 66/150 [20:29<27:07, 19.37s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  45%|████▍     | 67/150 [20:54<29:02, 21.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  45%|████▌     | 68/150 [21:14<28:36, 20.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  46%|████▌     | 69/150 [21:39<29:36, 21.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  47%|████▋     | 70/150 [21:53<26:06, 19.59s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  47%|████▋     | 71/150 [22:13<26:04, 19.80s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  48%|████▊     | 72/150 [22:30<24:44, 19.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  49%|████▊     | 73/150 [22:51<25:00, 19.48s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  49%|████▉     | 74/150 [23:10<24:38, 19.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  50%|█████     | 75/150 [23:32<25:14, 20.19s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  51%|█████     | 76/150 [23:55<25:49, 20.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  51%|█████▏    | 77/150 [24:17<25:47, 21.20s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  52%|█████▏    | 78/150 [24:40<26:05, 21.75s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  53%|█████▎    | 79/150 [25:00<25:22, 21.44s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  53%|█████▎    | 80/150 [25:18<23:41, 20.30s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  54%|█████▍    | 81/150 [25:37<22:59, 20.00s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  55%|█████▍    | 82/150 [25:51<20:31, 18.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  55%|█████▌    | 83/150 [26:10<20:22, 18.25s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  56%|█████▌    | 84/150 [26:31<21:01, 19.11s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  57%|█████▋    | 85/150 [26:50<20:43, 19.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  57%|█████▋    | 86/150 [27:08<19:54, 18.67s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  58%|█████▊    | 87/150 [27:27<19:42, 18.78s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  59%|█████▊    | 88/150 [27:47<19:54, 19.27s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  59%|█████▉    | 89/150 [28:02<18:20, 18.04s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  60%|██████    | 90/150 [28:23<18:46, 18.78s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  61%|██████    | 91/150 [28:43<18:49, 19.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  61%|██████▏   | 92/150 [29:04<19:09, 19.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  62%|██████▏   | 93/150 [29:21<18:01, 18.97s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  63%|██████▎   | 94/150 [29:42<18:10, 19.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  63%|██████▎   | 95/150 [30:02<18:07, 19.78s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  64%|██████▍   | 96/150 [30:22<17:46, 19.76s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  65%|██████▍   | 97/150 [30:40<17:07, 19.40s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  65%|██████▌   | 98/150 [30:54<15:24, 17.78s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  66%|██████▌   | 99/150 [31:10<14:33, 17.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  67%|██████▋   | 100/150 [31:31<15:16, 18.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  67%|██████▋   | 101/150 [31:52<15:38, 19.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  68%|██████▊   | 102/150 [32:18<16:49, 21.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  69%|██████▊   | 103/150 [32:38<16:14, 20.73s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  69%|██████▉   | 104/150 [32:58<15:46, 20.58s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  70%|███████   | 105/150 [33:16<14:56, 19.91s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  71%|███████   | 106/150 [33:34<14:10, 19.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  71%|███████▏  | 107/150 [33:55<14:09, 19.76s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  72%|███████▏  | 108/150 [34:18<14:27, 20.66s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  73%|███████▎  | 109/150 [34:35<13:19, 19.51s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  73%|███████▎  | 110/150 [34:53<12:41, 19.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  74%|███████▍  | 111/150 [35:15<12:57, 19.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  75%|███████▍  | 112/150 [35:35<12:38, 19.96s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  75%|███████▌  | 113/150 [35:54<12:11, 19.76s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  76%|███████▌  | 114/150 [36:13<11:47, 19.65s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  77%|███████▋  | 115/150 [36:35<11:45, 20.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  77%|███████▋  | 116/150 [36:54<11:21, 20.03s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  78%|███████▊  | 117/150 [37:16<11:15, 20.47s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  79%|███████▊  | 118/150 [37:37<11:04, 20.78s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  79%|███████▉  | 119/150 [38:01<11:14, 21.75s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  80%|████████  | 120/150 [38:21<10:34, 21.15s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  81%|████████  | 121/150 [38:42<10:11, 21.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  81%|████████▏ | 122/150 [39:01<09:35, 20.57s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  82%|████████▏ | 123/150 [39:20<09:02, 20.08s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  83%|████████▎ | 124/150 [39:40<08:36, 19.86s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  83%|████████▎ | 125/150 [40:05<09:00, 21.61s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  84%|████████▍ | 126/150 [40:29<08:55, 22.33s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  85%|████████▍ | 127/150 [40:52<08:37, 22.50s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  85%|████████▌ | 128/150 [41:07<07:22, 20.12s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  86%|████████▌ | 129/150 [41:30<07:19, 20.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  87%|████████▋ | 130/150 [41:50<06:53, 20.69s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  87%|████████▋ | 131/150 [42:11<06:38, 20.95s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  88%|████████▊ | 132/150 [42:32<06:12, 20.71s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  89%|████████▊ | 133/150 [42:51<05:47, 20.45s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  89%|████████▉ | 134/150 [43:13<05:34, 20.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  90%|█████████ | 135/150 [43:33<05:10, 20.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  91%|█████████ | 136/150 [43:53<04:44, 20.34s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  91%|█████████▏| 137/150 [44:12<04:17, 19.79s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  92%|█████████▏| 138/150 [44:26<03:39, 18.27s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  93%|█████████▎| 139/150 [44:41<03:08, 17.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  93%|█████████▎| 140/150 [45:02<03:03, 18.35s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  94%|█████████▍| 141/150 [45:24<02:55, 19.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  95%|█████████▍| 142/150 [45:44<02:37, 19.68s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  95%|█████████▌| 143/150 [46:05<02:19, 19.93s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  96%|█████████▌| 144/150 [46:20<01:51, 18.56s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  97%|█████████▋| 145/150 [46:36<01:29, 17.82s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  97%|█████████▋| 146/150 [46:58<01:15, 18.94s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  98%|█████████▊| 147/150 [47:17<00:57, 19.02s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  99%|█████████▊| 148/150 [47:36<00:38, 19.13s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set:  99%|█████████▉| 149/150 [47:58<00:19, 19.89s/it]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluasi Test Set: 100%|██████████| 150/150 [48:20<00:00, 20.61s/it]Evaluasi Test Set: 100%|██████████| 150/150 [48:20<00:00, 19.34s/it]
+
+[SUKSES] Disimpan ke → /mnt/extended-home/dzakaaufa/leakage/evaluation_results/test50_150/experiment_3b_class_inject50.csv
+
+[INFO] Ringkasan kolom CSV:
+  predicted_class  : nama motif yang VLM sebutkan dalam caption
+  dinov2_class     : nama motif menurut DINOv2 (None jika no_class)
+  motif_mentioned  : apakah gt_class muncul di caption (True/False)

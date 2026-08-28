@@ -1,0 +1,151 @@
+image_path,ground_truth_class,predicted_class,confidence,is_correct,predicted_rank_of_gt,reciprocal_rank
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Lana (Pakis Tutul).jpg,Malang,lamongan,0.9131647348403931,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 15 Batik Soendari (Sido Candra Kapala).jpg,Malang,sekarjagad,0.5755655169487,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Kantil (Mas-mas Mbois).jpg,Malang,malang,0.5238567590713501,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mulifah Data 11 Selempang Bandeng Lele.jpg,Lamongan,trenggalek,0.8474478125572205,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 4 Batik Soendari (Ikan Maskoki).jpg,Malang,malang,0.7203158736228943,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Istiqomah Data 6 Merak Nam Katil.jpg,Lamongan,lamongan,0.9811198115348816,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Rahayu (Kleten).jpg,Trenggalek,dayak,0.7210960388183594,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 13 Batik Kantil (Buntel).jpg,Malang,lamongan,0.8038786053657532,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 23 Batik Soendari (Padma Latar Ceceg).jpg,Malang,lamongan,0.6874781250953674,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mulifah Data 7 Pring Sedapur (Serumpun).jpg,Lamongan,lamongan,0.9935452938079834,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Istiqomah Data 3 Pisang Setandon.jpg,Lamongan,lamongan,0.6677578091621399,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 26 Batik Rahayu (Sido Mukti Rahayu).jpg,Trenggalek,tulungagung,0.9550679326057434,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 13 Batik Wagastu (Sayap Rona Harapan).jpg,Malang,malang,0.8855646848678589,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 17 Batik Rahayu (Gringsing Satrio Manah).jpg,Trenggalek,trenggalek,0.7726895213127136,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mutiara S Data 8 Singo Mengkok Kembang Brokoli.jpg,Lamongan,lamongan,0.9248672723770142,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 20 Batik Kantil (Bangau).jpg,Malang,lamongan,0.962263822555542,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 19 Batik Tiepuk (Parang Kawung Cengkeh).jpg,Trenggalek,tulungagung,0.8914811611175537,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Wagastu (Sayap Sulur Kopi).jpg,Malang,lamongan,0.8435512185096741,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 15 Batik Rahayu (Koi Keberuntungan).jpg,Trenggalek,malang,0.8148910999298096,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mekar Sari Data 6 Melati Deret.jpg,Lamongan,tulungagung,0.7063857913017273,0,6,0.16666666666666666
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Krajan (Truntum Garudeya).jpg,Malang,malang,0.7539482712745667,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 14 Batik Blimbing (Ista Malang Kucecwara Gunungan).jpg,Malang,malang,0.6120268702507019,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 17 Batik Kantil (Mak-mak Mbois).jpg,Malang,trenggalek,0.6485130190849304,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Istiqomah Data 1 Bandeng Lele Watu Cacah.jpg,Lamongan,malang,0.4710852801799774,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061005_ Anggrek Sulur_2025_FLORA_CULTURE.jpg,Lamongan,trenggalek,0.48178228735923767,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 25 Batik Tiepuk (Sekar Jagad Abstrak).jpg,Trenggalek,lamongan,0.6572498083114624,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Tutut Data 3 Sepyur Daun Melati.jpg,Lamongan,lamongan,0.8884096145629883,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 8 Batik Tiepuk (Kapur Sirih).jpg,Trenggalek,trenggalek,0.6727567315101624,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 9 Batik Kantil (Love Bird dan Kamboja).jpg,Malang,lamongan,0.5790587663650513,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 3 Batik Tiepuk Malang (Gemah Ripah Jahe Cengkeh).jpg,Trenggalek,lamongan,0.4830015003681183,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Rahayu (Parang Barong).jpg,Trenggalek,parang,0.9628414511680603,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Hamparan Rintik (Daun Waru dan Hujan).jpg,Malang,malang,0.8331655859947205,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Kantil (Sekar Jagad).jpg,Malang,malang,0.7171485424041748,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/FC Data 2 Bandeng Lele Krisan KLecubung.jpg,Lamongan,lamongan,0.9677804708480835,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 3 Batik Hamparan Rintik (Teratai Senja).jpg,Malang,betawi,0.7232052683830261,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 8 Batik Blimbing (Balai Kota Malang).jpg,Malang,malang,0.9184160232543945,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mutiara S Data 10 Kipas Bunga Sepatu.jpg,Lamongan,lamongan,0.9705228209495544,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 29 Batik Rahayu (Udan Liris).jpg,Trenggalek,tulungagung,0.5417611598968506,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 4 Batik Bengkel (Catur Padma Kahuripan).jpg,Malang,trenggalek,0.4505777657032013,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 12 Batik Kantil (Keong).jpg,Malang,trenggalek,0.45374616980552673,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 8 Batik Wagastu (Batik Musim Gugur).jpg,Malang,malang,0.7790180444717407,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Chotifa_35241420060107_Bandeng Lele Daun Imbo_2025_FLORA.jpg,Lamongan,lamongan,0.7478839755058289,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Istiqomah Data 2 Merak Latohan Kombinasi.jpg,Lamongan,lamongan,0.9889021515846252,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mekar Sari Data 2 Patran Pakis.jpg,Lamongan,trenggalek,0.47978636622428894,0,5,0.2
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Chotifa_35241420060102_Kepet Bandeng Lele_2025_CULTURE_FAUNA.jpg,Lamongan,lamongan,0.9974533915519714,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mutiara S Data 1 Bandeng Lele dalam Kolam.jpg,Lamongan,lamongan,0.738243043422699,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 9 Batik Rahayu (Truntum Cengkeh).jpg,Trenggalek,lamongan,0.3887209892272949,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 15 Batik Kantil (Parang Mawar Kupu-kupu).jpg,Malang,lamongan,0.37345391511917114,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 4 Batik Kantil (Rama Sinta Kantil).jpg,Malang,trenggalek,0.4731620252132416,0,5,0.2
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 11 Batik Lana (Bunga Wijaya Kusuma).jpg,Malang,malang,0.73826664686203,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Bengkel (Puspavardhati Sandhiya).jpg,Malang,lamongan,0.5745943784713745,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 23 Batik Kantil (Sarang Lebah).jpg,Malang,malang,0.6578733921051025,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 9 Batik Wagastu (Bon Kelengkeng).jpg,Malang,malang,0.4297220706939697,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 28 Batik Soendari (Sekartaji Latar Daun Bambu).jpg,Malang,malang,0.9493317604064941,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 7 Batik Lana (Parang Anggrek).jpg,Malang,malang,0.9302346706390381,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Bengkel (Ukel Kelana).jpg,Malang,malang,0.7818634510040283,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 6 Batik Wagastu (Sulur Wiji Timun).jpg,Malang,malang,0.5423049926757812,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 10 Batik Krajan (Parang Lombok).jpg,Malang,dayak,0.5418995022773743,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Hamparan Rintik (Tasik Madu).jpg,Malang,malang,0.9260338544845581,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 6 Batik Soendari (Trembesi).jpg,Malang,sidoluhur,0.33355963230133057,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 26 Batik Tiepuk (Sekar Jagad Cengkeh).jpg,Trenggalek,trenggalek,0.7527241706848145,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Tiepuk (Kipas Cengkeh).jpg,Trenggalek,trenggalek,0.5167416334152222,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 11 Batik Krajan (Ukel-ukel).jpg,Malang,tulungagung,0.4991879463195801,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Jayyida Data 14 Singa Duduk (Mitos).jpg,Lamongan,lamongan,0.7132857441902161,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061002_Gapuro Teratai_2025_FLORA_FAUNA.jpg,Lamongan,lamongan,0.4212101101875305,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061003_Gapuro Parang_2024_CULTURE.jpg,Lamongan,lamongan,0.7359610795974731,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 20 Batik Tiepuk (Junjung Derajat Mahkota Cengkeh).jpg,Trenggalek,trenggalek,0.9688506126403809,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 19 Batik Kantil (Bunga Mawar).jpg,Malang,lamongan,0.6427467465400696,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 21 Batik Kantil (Musahara Gauri).jpg,Malang,malang,0.6286515593528748,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mutiara S Data 9 Camar Melati.jpg,Lamongan,lamongan,0.952578067779541,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 9 Batik Lana (Bunga Wijaya Kusuma).jpg,Malang,malang,0.4531781077384949,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 9 Batik Krajan (Bangau Terbang).jpg,Malang,malang,0.5866822004318237,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 4 Batik Rahayu (Kupu-kupu Cengkeh).jpg,Trenggalek,lamongan,0.7583850622177124,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 18 Batik Wagastu (Motif Liris).jpg,Malang,tulungagung,0.5054936408996582,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 15 Batik Lana (Candi Padma).jpg,Malang,malang,0.9773622155189514,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 33 Batik Soendari (Garudeya Latar Kawung).jpg,Malang,kawung,0.5325911045074463,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061010_Bunga Sulur Biji Timun_2025_FLORA-CULTURE.jpg,Lamongan,dayak,0.26613324880599976,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061001_Bandeng Lele Gapuro Lamongan_2025_FAUNA_CULTURE.jpg,Lamongan,lamongan,0.5478297472000122,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/FC Data 5 Sulur Sukun.jpg,Lamongan,lamongan,0.7848142385482788,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 30 Batik Soendari (Noni Latar Gedeg).jpg,Malang,malang,0.8002930283546448,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Sukun (Batik Akar Kehidupan).jpg,Malang,malang,0.5824678540229797,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 32 Batik Soendari (Bunga Apel).jpg,Malang,malang,0.36295026540756226,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 6 Batik Kantil (Burung Perkutut).jpg,Malang,lamongan,0.7712295651435852,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Soendari (Lereng Singa Kawung).jpg,Malang,malang,0.8056381344795227,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 10 Batik Rahayu (Sido Asih Rahayu).jpg,Trenggalek,lamongan,0.9799014329910278,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 10 Batik Kantil (Merak Wolak-walik).jpg,Malang,lamongan,0.9543401598930359,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 29 Batik Soendari (Sekartaji Latar Kawung).jpg,Malang,trenggalek,0.3743840754032135,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Istiqomah Data 5 Bandeng Lele Batu Karang.jpg,Lamongan,lamongan,0.7539597749710083,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 6 Batik Rahayu (Pelabuhan Prigi).jpg,Trenggalek,betawi,0.5014162659645081,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mekar Sari Data 4 Putihan Amarilis.jpg,Lamongan,lamongan,0.9556313157081604,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Jayyida Data 8 Urang Kucing.jpg,Lamongan,lamongan,0.736616313457489,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 16 Batik Tiepuk (Sidoluhur Bledhak).jpg,Trenggalek,jlamprang,0.39936313033103943,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 18 Batik Rahayu (Sekar Jagat Rahayu).jpg,Trenggalek,trenggalek,0.9158033728599548,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 4 Batik Wagastu (Kawung Daur Rambat).jpg,Malang,malang,0.819068968296051,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 10 Batik Blimbing ( Daniswara Sukumara).jpg,Malang,malang,0.9773029088973999,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Tiepuk Trenggalek (Manggis Pecah).jpg,Trenggalek,trenggalek,0.8664374351501465,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 27 Batik Rahayu (Mustika Ayu).jpg,Trenggalek,trenggalek,0.6853837370872498,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/FC Data 4 Selempang Gunungan.jpg,Lamongan,lamongan,0.9259466528892517,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 12 Batik Soendari (Tugu Teratai).jpg,Malang,malang,0.7818583250045776,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mulifah Data 9 Biota Laut.jpg,Lamongan,lamongan,0.5924686789512634,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Baronggung (Bunga Nirwana 1).jpg,Tulungagung,lamongan,0.4033859670162201,0,9,0.1111111111111111
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 16 Batik Kantil (Kembang Sepatu).jpg,Malang,malang,0.8734450936317444,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mutiara S Data 4 Bangau dan Mawar Kombinasi.jpg,Lamongan,lamongan,0.7948660254478455,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 6 Batik Baronggung (Bunga Nirwana 2).jpg,Tulungagung,malang,0.6731893420219421,0,10,0.1
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 21 Batik Rahayu (Kawung Kopi Pecah).jpg,Trenggalek,tulungagung,0.6736104488372803,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 13 Batik Lana (Alam parang daun teh biru).jpg,Malang,malang,0.5741823315620422,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Tiepuk Trenggalek (Turonggo Yakso).jpg,Trenggalek,malang,0.6631262302398682,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 13 Batik Blimbing (Daniswara Jiwa Trisna).jpg,Malang,malang,0.8673794269561768,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Soendari (Arca GanesCandra Kapalaha).jpg,Malang,malang,0.31737998127937317,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061004_Irfan Hakim_2025_FLORA.jpg,Lamongan,lamongan,0.7398725152015686,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Baronggung (Gayatri Putri).jpg,Tulungagung,tulungagung,0.3970917761325836,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Azyfa_35241420060306_Bandeng Lele Manggar Kelapa_2025_FLORA_FAUNA_CULTURE.jpg,Lamongan,trenggalek,0.5251460671424866,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Tutut Data 4 Lamongan Megilan.jpg,Lamongan,lamongan,0.9876547455787659,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 10 Batik Lana (Bunga Matahari).jpg,Malang,tribusono,0.24376791715621948,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Chotifa_35241420060103_Daun Sente (Talas)_2025_FLORA.jpg,Lamongan,lamongan,0.9099107384681702,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 7 Batik Bengkel (Mayuragari).jpg,Malang,trenggalek,0.384192556142807,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 31 Batik Kantil (Mawar).jpg,Malang,malang,0.7878497242927551,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 14 Batik Krajan (Parang Kopi).jpg,Malang,malang,0.6869456768035889,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Jayyida Data 17 Sendang Dhuwur.jpg,Lamongan,trenggalek,0.8210278153419495,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mulifah Data 10 Singo Mengkok.jpg,Lamongan,trenggalek,0.5452674627304077,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 11 Batik Baronggung (Rumput Laut).jpg,Tulungagung,tulungagung,0.9623320698738098,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 12 Batik Tiepuk (Ayam Bekisar).jpg,Trenggalek,trenggalek,0.9749167561531067,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Baronggung (Jahewono).jpg,Tulungagung,tulungagung,0.9928597807884216,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 27 Batik Soendari (Sekartaji Latar Gede).jpg,Malang,trenggalek,0.2995854914188385,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Azyfa_35241420060309_Sekar Jagad Lamongan_2025_FLORA.jpg,Lamongan,lamongan,0.9719573259353638,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 3 Batik Rahayu (Seret Jedet.jpg,Trenggalek,trenggalek,0.9724694490432739,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 32 Batik Kantil (Kamalini Buana).jpg,Malang,malang,0.33190566301345825,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 13 Batik Soendari (Batik Kopi).jpg,Malang,malang,0.8193328380584717,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 14 Batik Wagastu (Budidaya Melati).jpg,Malang,malang,0.6432880759239197,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Sukun (Batik Pohon Kehidupan).jpg,Malang,malang,0.708861768245697,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 17 Batik Blimbing (Ista Malang Kucecwara).jpg,Malang,trenggalek,0.8952977657318115,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 8 Batik Krajan (Sekar Jagad).jpg,Malang,malang,0.5607249140739441,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mekar Sari Data 5 Putihan Mekar Sewindu.jpg,Lamongan,trenggalek,0.8707633018493652,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 3 Batik Blimbing (Daniswara Silamukti).jpg,Malang,malang,0.9212864637374878,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 11 Batik Tiepuk (Turonggo Yakso Abstrak).jpg,Trenggalek,trenggalek,0.8949257731437683,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061006_Bandeng Lele Teratai_2024_FAUNA_FLORA.jpg,Lamongan,malang,0.3590516448020935,0,4,0.25
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061009_Gapuro Singo Mengkok_2025_CULTURE.jpg,Lamongan,lamongan,0.693976104259491,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Jayyida Data 15 Pager Ayu.jpg,Lamongan,lamongan,0.8422741889953613,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 1 Batik Krajan (Kopi).jpg,Malang,malang,0.5435529351234436,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 9 Batik Tiepuk (Semen Romo).jpg,Trenggalek,trenggalek,0.8791016936302185,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 24 Batik Tiepuk (Larung Sembonyo).jpg,Trenggalek,trenggalek,0.945956826210022,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 5 Batik Lana (Jumputan).jpg,Malang,tulungagung,0.37605512142181396,0,3,0.3333333333333333
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Mutiara S Data 6 Karang Pring.jpg,Lamongan,lamongan,0.9352399110794067,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 2 Batik Sukun (Batik Okus).jpg,Malang,malang,0.4298775792121887,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 3 Batik Kantil (Topeng Kantil).jpg,Malang,malang,0.5665953755378723,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Afiq Jaya_35241420061008_Singo Mengkok Gagak Siup_2025_CULTURE.jpg,Lamongan,lamongan,0.9808484315872192,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Tutut Data 8 Ceplik Melati Singo Mengkok.jpg,Lamongan,lamongan,0.9921397566795349,1,1,1.0
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 3 Batik Krajan (Bunga Terompet Garudeya).jpg,Malang,lamongan,0.4078921973705292,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 26 Batik Kantil (Kamalini Buana).jpg,Malang,trenggalek,0.4594767391681671,0,2,0.5
+/mnt/extended-home/dzakaaufa/dataset/all_images_captioning/Data 7 Batik Krajan (Bunga Sepatu).jpg,Malang,malang,0.7396088242530823,1,1,1.0

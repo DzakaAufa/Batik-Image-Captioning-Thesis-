@@ -1,0 +1,40 @@
+nohup: ignoring input
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781333928.675291 4012214 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+[INFO] Membaca data hasil prediksi: /mnt/extended-home/dzakaaufa/experiment/hasil/pure_philosophy_hard_predict.csv
+
+[Mulai] Menghitung Metrik Evaluasi Klaster [PURE_PHILOSOPHY]...
+------------------------------------------------------------
+ -> [1/3] Memproses Bagian Kelas...
+ -> [2/3] Memproses Bagian Filosofi...
+    -> Menghitung Semantic Similarity (MiniLM)...
+ -> [3/3] Mode PURE_PHILOSOPHY aktif. Metriks visual dilewati.
+
+============================================================
+             HASIL EVALUASI KLASTER SKRIPSI
+============================================================
+ Tipe Eksperimen   : PURE_PHILOSOPHY
+ Jumlah Sampel     : 333
+------------------------------------------------------------
+ [KLASTER KELAS]
+  > Classification Accuracy            : 0.9489
+  > Motif Mention Rate                 : 0.6787
+------------------------------------------------------------
+ [KLASTER VISUAL]
+  > CLIPScore                          : 0.0000
+  > SPICE                              : 0.0000
+  > Visual BERTScore                   : 0.0000
+  > METEOR                             : 0.0000
+  * VISUAL_QUALITY_AVG                 : 0.0000
+------------------------------------------------------------
+ [KLASTER FILOSOFI]
+  > Philosophy BERTScore               : 0.8894
+  > Philosophy Semantic Similarity     : 0.6340
+  > Philosophy Keyword Coverage        : 0.1467
+  > Philosophy Consistency             : 0.9982
+  * PHILOSOPHY_QUALITY_AVG             : 0.5567
+============================================================
+Sukses menyimpan laporan klaster skripsi ke → /mnt/extended-home/dzakaaufa/experiment/hasil/metrics_clustered_pure_philosophy.json
+

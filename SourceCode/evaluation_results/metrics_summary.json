@@ -1,0 +1,14 @@
+{
+    "BLEU-1": 0.4398135453797642,
+    "BLEU-4": 0.1970839654468232,
+    "ROUGE-L": 0.4201637502727854,
+    "METEOR": 0.5416975044938503,
+    "SPICE": 0.31026401762547273,
+    "BERTScore": 0.9042051231861115,
+    "CLIPScore": 0.3409940795103709,
+    "VLM_Classification_Accuracy": 0.0,
+    "DINOv2_Classification_Accuracy": null,
+    "Motif_Mention_Rate": 0.0,
+    "Lexical_Relevance_Avg": 0.3996896913983058,
+    "Overall_Quality_Avg": 0.4506031408450255
+}

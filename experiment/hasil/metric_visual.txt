@@ -1,0 +1,65 @@
+nohup: ignoring input
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781335186.383456 4026677 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+[INFO] Membaca data hasil prediksi: /mnt/extended-home/dzakaaufa/experiment/hasil/visual_philosophy_hard_predict.csv
+
+[Mulai] Menghitung Metrik Evaluasi Klaster [VISUAL_PHILOSOPHY]...
+------------------------------------------------------------
+ -> [1/3] Memproses Bagian Kelas...
+ -> [2/3] Memproses Bagian Filosofi...
+    -> Menghitung Semantic Similarity (MiniLM)...
+ -> [3/3] Memproses Bagian Visual...
+[nltk_data] Downloading package wordnet to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+Parsing reference captions
+Parsing test captions
+Initiating Stanford parsing pipeline
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator tokenize
+[main] INFO edu.stanford.nlp.pipeline.TokenizerAnnotator - TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ssplit
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator parse
+[main] INFO edu.stanford.nlp.parser.common.ParserGrammar - Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... 
+done [0.5 sec].
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator lemma
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ner
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1.4 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [0.6 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [0.6 sec].
+Threads( StanfordCoreNLP ) [17.894 seconds]
+SPICE evaluation took: 33.14 s
+
+============================================================
+             HASIL EVALUASI KLASTER SKRIPSI
+============================================================
+ Tipe Eksperimen   : VISUAL_PHILOSOPHY
+ Jumlah Sampel     : 333
+------------------------------------------------------------
+ [KLASTER KELAS]
+  > Classification Accuracy            : 0.9489
+  > Motif Mention Rate                 : 0.9489
+------------------------------------------------------------
+ [KLASTER VISUAL]
+  > CLIPScore                          : 0.3311
+  > SPICE                              : 0.6193
+  > Visual BERTScore                   : 0.9447
+  > METEOR                             : 0.6399
+  * VISUAL_QUALITY_AVG                 : 0.6317
+------------------------------------------------------------
+ [KLASTER FILOSOFI]
+  > Philosophy BERTScore               : 0.8963
+  > Philosophy Semantic Similarity     : 0.6557
+  > Philosophy Keyword Coverage        : 0.4625
+  > Philosophy Consistency             : 0.9988
+  * PHILOSOPHY_QUALITY_AVG             : 0.6715
+============================================================
+Sukses menyimpan laporan klaster skripsi ke → /mnt/extended-home/dzakaaufa/experiment/hasil/metrics_clustered_visual_philosophy.json
+

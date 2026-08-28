@@ -1,0 +1,66 @@
+nohup: ignoring input
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784867609.375860  340820 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+ Membaca data hasil prediksi: /mnt/extended-home/dzakaaufa/leakage/evaluation_results/tes50_65/experiment_3b_class_inject65.csv
+
+[Mulai] Menghitung Metrik Evaluasi...
+--------------------------------------------------
+ -> [1/8] Menghitung BLEU Score (NLTK)...
+ -> [2/8] Menghitung ROUGE-L Score...
+ -> [3/8] Menghitung METEOR Score...
+[nltk_data] Downloading package wordnet to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/nas-
+[nltk_data]     hpg9/dzakaaufa/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+ -> [4/8] Menghitung SPICE Score...
+Parsing reference captions
+Parsing test captions
+Initiating Stanford parsing pipeline
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator tokenize
+[main] INFO edu.stanford.nlp.pipeline.TokenizerAnnotator - TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ssplit
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator parse
+[main] INFO edu.stanford.nlp.parser.common.ParserGrammar - Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... 
+done [0.5 sec].
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator lemma
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ner
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1.3 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [0.7 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [0.8 sec].
+Threads( StanfordCoreNLP ) [7.10 seconds]
+SPICE evaluation took: 15.02 s
+ -> [5/8] Menghitung BERTScore...
+ -> [6/8] Menghitung CLIPScore...
+CLIP:   0%|          | 0/65 [00:00<?, ?it/s]CLIP:   2%|▏         | 1/65 [00:02<02:22,  2.23s/it]CLIP:   3%|▎         | 2/65 [00:02<01:26,  1.37s/it]CLIP:   5%|▍         | 3/65 [00:03<01:01,  1.01it/s]CLIP:   6%|▌         | 4/65 [00:04<00:49,  1.22it/s]CLIP:   8%|▊         | 5/65 [00:04<00:42,  1.41it/s]CLIP:   9%|▉         | 6/65 [00:05<00:47,  1.24it/s]CLIP:  11%|█         | 7/65 [00:06<00:53,  1.09it/s]CLIP:  12%|█▏        | 8/65 [00:07<00:45,  1.25it/s]CLIP:  14%|█▍        | 9/65 [00:07<00:37,  1.50it/s]CLIP:  15%|█▌        | 10/65 [00:08<00:44,  1.24it/s]CLIP:  17%|█▋        | 11/65 [00:09<00:40,  1.35it/s]CLIP:  18%|█▊        | 12/65 [00:09<00:33,  1.57it/s]CLIP:  20%|██        | 13/65 [00:10<00:31,  1.63it/s]CLIP:  22%|██▏       | 14/65 [00:10<00:29,  1.76it/s]CLIP:  23%|██▎       | 15/65 [00:11<00:29,  1.71it/s]CLIP:  25%|██▍       | 16/65 [00:12<00:30,  1.59it/s]CLIP:  26%|██▌       | 17/65 [00:12<00:28,  1.68it/s]CLIP:  28%|██▊       | 18/65 [00:13<00:28,  1.67it/s]CLIP:  29%|██▉       | 19/65 [00:13<00:26,  1.75it/s]CLIP:  31%|███       | 20/65 [00:14<00:29,  1.53it/s]CLIP:  32%|███▏      | 21/65 [00:15<00:26,  1.63it/s]CLIP:  34%|███▍      | 22/65 [00:15<00:25,  1.68it/s]CLIP:  35%|███▌      | 23/65 [00:16<00:23,  1.79it/s]CLIP:  37%|███▋      | 24/65 [00:16<00:22,  1.80it/s]CLIP:  38%|███▊      | 25/65 [00:17<00:23,  1.71it/s]CLIP:  40%|████      | 26/65 [00:17<00:22,  1.75it/s]CLIP:  42%|████▏     | 27/65 [00:18<00:22,  1.71it/s]CLIP:  43%|████▎     | 28/65 [00:19<00:21,  1.73it/s]CLIP:  45%|████▍     | 29/65 [00:19<00:20,  1.75it/s]CLIP:  46%|████▌     | 30/65 [00:20<00:20,  1.74it/s]CLIP:  48%|████▊     | 31/65 [00:20<00:20,  1.70it/s]CLIP:  49%|████▉     | 32/65 [00:21<00:18,  1.78it/s]CLIP:  51%|█████     | 33/65 [00:21<00:17,  1.87it/s]CLIP:  52%|█████▏    | 34/65 [00:22<00:17,  1.79it/s]CLIP:  54%|█████▍    | 35/65 [00:22<00:16,  1.85it/s]CLIP:  55%|█████▌    | 36/65 [00:23<00:15,  1.93it/s]CLIP:  57%|█████▋    | 37/65 [00:23<00:12,  2.17it/s]CLIP:  58%|█████▊    | 38/65 [00:24<00:12,  2.11it/s]CLIP:  60%|██████    | 39/65 [00:24<00:12,  2.08it/s]CLIP:  62%|██████▏   | 40/65 [00:25<00:15,  1.57it/s]CLIP:  63%|██████▎   | 41/65 [00:26<00:13,  1.73it/s]CLIP:  65%|██████▍   | 42/65 [00:26<00:12,  1.82it/s]CLIP:  66%|██████▌   | 43/65 [00:27<00:10,  2.04it/s]CLIP:  68%|██████▊   | 44/65 [00:27<00:10,  1.95it/s]CLIP:  69%|██████▉   | 45/65 [00:28<00:10,  1.85it/s]CLIP:  71%|███████   | 46/65 [00:28<00:10,  1.85it/s]CLIP:  72%|███████▏  | 47/65 [00:29<00:09,  1.84it/s]CLIP:  74%|███████▍  | 48/65 [00:29<00:08,  1.96it/s]CLIP:  75%|███████▌  | 49/65 [00:30<00:08,  1.89it/s]CLIP:  77%|███████▋  | 50/65 [00:30<00:07,  1.88it/s]CLIP:  78%|███████▊  | 51/65 [00:31<00:07,  1.83it/s]CLIP:  80%|████████  | 52/65 [00:31<00:07,  1.80it/s]CLIP:  82%|████████▏ | 53/65 [00:32<00:06,  1.85it/s]CLIP:  83%|████████▎ | 54/65 [00:33<00:06,  1.82it/s]CLIP:  85%|████████▍ | 55/65 [00:33<00:05,  1.78it/s]CLIP:  86%|████████▌ | 56/65 [00:34<00:04,  1.95it/s]CLIP:  88%|████████▊ | 57/65 [00:34<00:04,  1.96it/s]CLIP:  89%|████████▉ | 58/65 [00:35<00:03,  1.99it/s]CLIP:  91%|█████████ | 59/65 [00:35<00:03,  1.96it/s]CLIP:  92%|█████████▏| 60/65 [00:36<00:02,  1.87it/s]CLIP:  94%|█████████▍| 61/65 [00:36<00:02,  1.89it/s]CLIP:  95%|█████████▌| 62/65 [00:37<00:01,  2.04it/s]CLIP:  97%|█████████▋| 63/65 [00:37<00:01,  1.96it/s]CLIP:  98%|█████████▊| 64/65 [00:38<00:00,  1.86it/s]CLIP: 100%|██████████| 65/65 [00:38<00:00,  1.87it/s]CLIP: 100%|██████████| 65/65 [00:38<00:00,  1.68it/s]
+ -> [7/8] Menghitung Classification Accuracy...
+    DINOv2 Acc (mode 'hard' only, n=65): 0.7692
+ -> [8/8] Menghitung Motif Mention Rate...
+
+=======================================================
+ HASIL EVALUASI CAPTIONING BATIK
+=======================================================
+Jumlah Sampel Diuji          : 65
+-------------------------------------------------------
+BLEU-1 (Precision)           : 0.5855
+BLEU-4 (Grammar)             : 0.4299
+ROUGE-L (Recall)             : 0.6491
+METEOR (Synonyms)            : 0.7151
+SPICE (Graph/Sem)            : 0.5115
+BERTScore (Semantic)         : 0.9332
+CLIPScore (Visual)           : 0.3253
+-------------------------------------------------------
+VLM Classification Acc       : 0.7692
+DINOv2 Classification Acc    : 0.7692
+Motif Mention Rate           : 0.7692
+-------------------------------------------------------
+Lexical Relevance Avg        : 0.5949
+Overall Quality Avg          : 0.5928
+=======================================================
+Ringkasan sukses disimpan ke → /mnt/extended-home/dzakaaufa/leakage/evaluation_results/tes50_65/metrics_summary.json
+
