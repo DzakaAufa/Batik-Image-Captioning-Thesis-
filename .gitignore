@@ -33,9 +33,19 @@ experiment/models/
 *.h5
 
 # ==========================================
-# 4. Large Raw Dataset Images
+# 4. Large Raw Dataset Images (CSV Captioning tetap masuk)
 # ==========================================
-dataset/
+dataset/baru_captioning/
+dataset/image_genbatik/
+dataset/all_images_captioning/
+dataset/test/
+dataset/**/*.jpg
+dataset/**/*.jpeg
+dataset/**/*.png
+dataset/**/*.webp
+dataset/**/*.JPG
+dataset/**/*.PNG
+dataset/**/*.JPEG
 foto/
 *.zip
 *.tar.gz
